@@ -1,0 +1,31 @@
+.menu-btn {
+  outline: thin sold $first-color;
+  border: 0;
+  cursor: pointer;
+  background-color: $second-color;
+
+  svg > * {
+    fill: $first-color;
+  }
+}
+
+.btn {
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display: inline-block;
+  width: 200px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: $white-color;
+  background-color: $first-color;
+}
+
+@media screen and (min-width: 768px) {
+}
+
+@media screen and (min-width: 1024px) {
+  .menu-btn {
+    display: none;
+  }
+}

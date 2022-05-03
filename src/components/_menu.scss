@@ -1,0 +1,52 @@
+.menu {
+  position: fixed;
+  left: 0;
+  bottom: $header-height;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: $second-color;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+
+  a {
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: $first-color;
+  }
+  a:hover {
+    color: $white-color;
+    background-color: $first-color;
+  }
+}
+
+.menu.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+@media screen and (min-width: 768px) {
+}
+
+@media screen and (min-width: 1024px) {
+  .menu {
+    position: static;
+    width: auto;
+    flex-direction: row;
+    opacity: 1;
+    pointer-events: auto;
+    margin-left: 20px;
+    a {
+      padding: 0 1rem;
+    }
+    a:hover {
+      background-color: transparent;
+    }
+    a:last-child {
+      padding-right: 0;
+    }
+  }
+}

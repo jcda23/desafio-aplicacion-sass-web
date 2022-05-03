@@ -1,0 +1,40 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  background: $white-color;
+  justify-content: center;
+  padding: 50px 20px 0 20px;
+
+  .titulo-seccion {
+    background: $white-color;
+    color: $text-color;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+  .redes-sociales {
+    background: $white-color;
+    display: flex;
+    justify-content: center;
+
+    i {
+      color: $text-color;
+      font-size: 40px;
+      padding: 40px 20px;
+    }
+    i:hover {
+      color: $first-color;
+    }
+  }
+  .copy {
+    background: $second-color;
+    small {
+      display: flex;
+      justify-content: center;
+      color: $white-color;
+      font-size: 0.6rem;
+      padding: 0 0 20px 0;
+      letter-spacing: 2px;
+    }
+  }
+}

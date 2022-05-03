@@ -1,0 +1,75 @@
+.box-shadow-logo {
+  box-shadow: -5px -5px 5px rgba(255, 255, 255, 0.1),
+    10px 10px 10px rgba(0, 0, 0, 0.4),
+    inset -5px -5px 5px rgba(255, 255, 255, 0.2),
+    inset 10px 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+.box-shado-logo-before {
+  box-shadow: inset -2px -2px 5px rgba(255, 255, 255, 0.2),
+    inset 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.box-shadow-1 {
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.25);
+}
+
+.gradient {
+  background: linear-gradient(
+    90deg,
+    rgba(56, 255, 31, 1) 35%,
+    rgba(20, 255, 233, 1) 60%,
+    rgba(255, 0, 224, 1) 92%
+  );
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--max-width);
+}
+
+.none {
+  display: none;
+}
+
+.section-title {
+  border-bottom: thin solid $first-color;
+  /*  border-bottom: thin solid rgba(0, 0, 0, 0.3);
+  box-shadow: 9px 8px 11px 2px rgba(0, 0, 0, 0.4);*/
+  margin: 2rem auto;
+  padding: 0.5rem 1rem;
+  width: 250px;
+  text-align: center;
+  color: $title-color;
+}
+
+@mixin flexible($dis, $direction, $just, $align) {
+  display: $dis;
+  flex-direction: $direction;
+  justify-content: $just;
+  align-items: $align;
+}
+
+@mixin hero-image($image) {
+  background-image: url($image);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+@mixin hero-opacity($color) {
+  background-color: $color;
+}
+
+@mixin grid-product($columnas, $espacio) {
+  display: grid;
+  grid-template-columns: repeat($columnas, 1fr);
+  gap: $espacio;
+
+  @media screen and (max-width: 480px) {
+    grid-template-columns: 1fr;
+    gap: 0em;
+  }
+}

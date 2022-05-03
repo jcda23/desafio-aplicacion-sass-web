@@ -1,0 +1,16 @@
+.hero-image {
+  @include hero-image("../img/brutal.jpg");
+
+  .hero-image-opacity {
+    @include flexible(flex, none, center, center);
+    width: 100%;
+    min-height: 100vh;
+    text-align: center;
+    @include hero-opacity($black-alpha-color);
+
+    .hero-image-content h2 {
+      font-size: 7vw;
+      color: $white-color;
+    }
+  }
+}
