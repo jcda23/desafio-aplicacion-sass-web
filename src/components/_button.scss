@@ -1,5 +1,5 @@
 .menu-btn {
-  outline: thin sold $first-color;
+  outline: thin solid $first-color;
   border: 0;
   cursor: pointer;
   background-color: $second-color;
@@ -19,9 +19,6 @@
   text-decoration: none;
   color: $white-color;
   background-color: $first-color;
-}
-
-@media screen and (min-width: 768px) {
 }
 
 @media screen and (min-width: 1024px) {

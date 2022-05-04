@@ -3,7 +3,8 @@
   flex-direction: column;
   background: $white-color;
   justify-content: center;
-  padding: 50px 20px 0 20px;
+  padding-top: 3rem;
+  margin-bottom: 3rem;
 
   .titulo-seccion {
     background: $white-color;
@@ -18,12 +19,12 @@
     justify-content: center;
 
     i {
-      color: $text-color;
+      color: $first-color;
       font-size: 40px;
       padding: 40px 20px;
     }
     i:hover {
-      color: $first-color;
+      color: $second-color;
     }
   }
   .copy {
@@ -36,5 +37,14 @@
       padding: 0 0 20px 0;
       letter-spacing: 2px;
     }
+  }
+}
+
+@media screen and (min-width: 768px) {
+}
+
+@media screen and (min-width: 1024px) {
+  .footer {
+    margin-bottom: 0;
   }
 }

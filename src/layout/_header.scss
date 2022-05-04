@@ -14,19 +14,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 100%;
 
-    .logo {
-      a {
-        color: $second-color;
-        font-weight: bold;
-        font-size: 2rem;
-        img {
-          width: 2rem;
-          height: 2rem;
-        }
-      }
-    }
     .logotype {
+      position: absolute;
+      margin-left: 5.5rem;
       a {
         color: $white-color;
         font-size: 1.5rem;
@@ -37,22 +29,25 @@
 }
 
 @media screen and (min-width: 768px) {
+  .header {
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+    }
+  }
 }
 
 @media screen and (min-width: 1024px) {
   .header {
-    display: flex;
-    justify-content: flex-start;
     position: sticky;
     top: 0;
     padding: 1rem;
     height: 5rem;
-    .logo {
-      a {
-        img {
-          margin-right: 20px;
-        }
-      }
+    .container {
+      display: flex;
+      height: 100%;
     }
   }
 }

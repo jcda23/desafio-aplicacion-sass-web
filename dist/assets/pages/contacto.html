@@ -16,7 +16,7 @@
 <body>
   <header class="header">
     <section class="container">
-      <div class="logo">
+      <div class="mixer-logo">
         <a href="">
           <img src="../img/merximport-white(1).png" alt=""></a>
         <span></span>
@@ -44,9 +44,9 @@
     </section>
   </header>
 
-  <main id="contacto" class="contact section">
-    <section class="container margin">
-      <h2 class="section-title">Contactanos</h2>
+  <main id="nosotros" class="contact section sticky">
+    <section class="container">
+      <h2 class="section-title section-title-card">Contactanos</h2>
       <article class="contact-cards">
         <aside class="contact-card box-shadow-1">
           <a class="icon" href="#"><i class="fa-solid fa-house"></i></a>
@@ -85,16 +85,13 @@
           title="Nombre sólo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
         <input type="email" name="email" placeholder="Ingresa tu correo *" title="Email incorrecto"
           pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
-        <textarea name="comments" cols="50" rows="10" placeholder="Déjanos tus comentarios *" required></textarea>
-        <div class="contact-form-loader text-center none">
-          <img src=" " alt="Enviando...">
-        </div>
-        <input class="btn btn-contact" type="submit" value="ENVIAR MENSAJE">
+        <textarea name="comments" cols="50" rows="10" placeholder="Déjanos tu comentario*" required></textarea>
+        <input class="btn btn-header" type="submit" value="ENVIAR MENSAJE">
       </form>
     </section>
   </main>
+  <script src="../js/main.js"></script>
   <script src="https://kit.fontawesome.com/35ecaaf3bf.js" crossorigin="anonymous"></script>
-  <script src="./assets/js/main.js"></script>
   <script src="https://kit.fontawesome.com/35ecaaf3bf.js" crossorigin="anonymous"></script>
 </body>
 

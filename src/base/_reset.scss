@@ -8,6 +8,9 @@ body {
   padding: 0;
   overflow-x: hidden;
   color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 *,
@@ -21,7 +24,9 @@ a:hover {
 }
 
 img {
-  max-width: 100%;
   height: auto;
-  object-fit: cover;
+}
+
+.sticky {
+  flex-grow: 1;
 }

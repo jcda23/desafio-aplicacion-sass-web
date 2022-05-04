@@ -1,5 +1,5 @@
 .hero-image {
-  @include hero-image("../img/brutal.jpg");
+  @include hero-image("../img/alpinismo7.jpg");
 
   .hero-image-opacity {
     @include flexible(flex, none, center, center);
@@ -8,9 +8,11 @@
     text-align: center;
     @include hero-opacity($black-alpha-color);
 
-    .hero-image-content h2 {
-      font-size: 7vw;
-      color: $white-color;
+    .hero-image-content {
+      h2 {
+        font-size: 7vw;
+        color: $white-color;
+      }
     }
   }
 }

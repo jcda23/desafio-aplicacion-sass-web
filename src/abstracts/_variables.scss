@@ -14,3 +14,19 @@ $black-alpha-color: rgba(0, 0, 0, 0.5);
 $font: "Raleway", sans-serif;
 $max-width: 1200px;
 $header-height: 5em;
+
+$bs-custom-dark-rgb: #240229;
+$border-mixer: 3px solid $bs-custom-dark-rgb;
+$box-shadow-mixer: -5px -5px 5px rgba(255, 255, 255, 0.1),
+  10px 10px 10px rgba(0, 0, 0, 0.4),
+  inset -5px -5px 5px rgba(255, 255, 255, 0.2),
+  inset 10px 10px 10px rgba(0, 0, 0, 0.4);
+$box-shadow-mixer-before: inset -2px -2px 5px rgba(255, 255, 255, 0.2),
+  inset 3px 3px 5px rgba(0, 0, 0, 0.5);
+$lenear-gradient-span-mixer: linear-gradient(
+  90deg,
+  rgba(56, 255, 31, 1) 35%,
+  rgba(20, 255, 233, 1) 60%,
+  rgba(255, 0, 224, 1) 92%
+);
+$border-rgb-mixer: 0.1875rem;

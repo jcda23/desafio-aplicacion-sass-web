@@ -1,20 +1,70 @@
-.about-card {
-  margin: 1rem auto;
-  padding: 1rem;
-  width: 800px;
-  height: auto;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.about {
+  @include hero-image("../img/3.jpg");
+  margin-bottom: 3rem;
+  .container-about {
+    .about-cards {
+      .about-card {
+        margin: 1rem auto;
+        padding: 1rem;
+        max-width: 800px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background-color: $white-color;
 
-  * > svg {
-    width: 2rem;
-    height: 2rem;
-    fill: var(--first-color);
+        svg {
+          width: 2rem;
+          height: 2rem;
+          fill: $second-color;
+        }
+        small {
+          margin-top: 1rem;
+        }
+        a {
+          padding-bottom: 1rem;
+          i {
+            font-size: 2rem;
+            color: $first-color;
+          }
+        }
+        p {
+          padding-top: 1rem;
+        }
+      }
+    }
   }
-  * > small {
-    margin-top: -1rem;
+}
+@media screen and (min-width: 768px) {
+  .about {
+    .container-about {
+      .about-cards {
+        margin: 4rem 3rem 0 3rem;
+        .about-card {
+          margin: 1rem auto;
+          padding: 1rem;
+          max-width: 800px;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .about {
+    margin-bottom: 0;
+    .container-about {
+      .section-title {
+        color: $white-color;
+      }
+      .about-card {
+        margin: 1rem auto;
+        padding: 1rem;
+        max-width: 800px;
+        height: auto;
+      }
+    }
   }
 }
