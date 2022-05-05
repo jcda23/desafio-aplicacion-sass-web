@@ -1,13 +1,15 @@
 @charset "UTF-8";
 
-@import "abstracts/variables";
+@import "var/variables";
 
-@import "base/reset", "base/typography", "base/utilities";
+@import "base/reset", "base/typography";
+
+@import "tools/mixins", "tools/utilities";
 
 @import "layout/header", "layout/home", "layout/product", "layout/main",
   "layout/footer";
 
-@import "components/button", "components/hero-image", "components/menu",
-  "components/mixer-logo", "components/mixer-btn", "components/contact-card";
+@import "components/button", "components/menu", "components/mixer-logo",
+  "components/mixer-btn", "components/mixer-btn-neon", "components/contact-card";
 
-@import "pages/contacto", "pages/nosotros";
+@import "pages/contacto", "pages/nosotros", "pages/guia";

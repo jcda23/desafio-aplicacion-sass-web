@@ -1,0 +1,89 @@
+.mixer-btn-neon {
+  a {
+    background-color: $first-color;
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: $white-color;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    width: 200px;
+    font-weight: bold;
+    text-align: center;
+    overflow: hidden;
+    transition: 0.2s;
+    /*
+    span {
+      position: absolute;
+      display: block;
+    }
+
+    span:nth-child(1) {
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, $first-color);
+    }
+
+    span:nth-child(2) {
+      top: 100%;
+      right: 0;
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(180deg, transparent, $first-color);
+      background: linear-gradient(180deg, transparent);
+    }
+    span:nth-child(3) {
+      right: -100%;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(180deg, transparent, $first-color);
+      background: linear-gradient(270deg, transparent);
+    }
+
+    span:nth-child(4) {
+      bottom: -100%;
+      left: 0;
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(360deg, transparent, $first-color);
+    }*/
+  }
+
+  a:hover {
+    background-color: $second-color; /*#011802;*/
+    color: $white-color;
+    box-shadow: 0 0 10px $first-color, 0 0 40px $first-color,
+      0 0 80px $first-color;
+    opacity: 1;
+    transition-delay: 0s;
+  }
+  /*
+  a:hover span:nth-child(1) {
+    left: 100%;
+    transition: 1s;
+  }
+
+  a:hover span:nth-child(2) {
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+  }
+
+  a:hover span:nth-child(3) {
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+  }
+
+  a:hover span:nth-child(4) {
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+  }*/
+}

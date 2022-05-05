@@ -46,6 +46,11 @@
           padding: 1rem;
           max-width: 800px;
           height: auto;
+
+          p {
+            margin: 1rem 2rem;
+            text-align: justify;
+          }
         }
       }
     }
@@ -64,6 +69,11 @@
         padding: 1rem;
         max-width: 800px;
         height: auto;
+
+        p {
+          margin: 1rem 2rem;
+          text-align: justify;
+        }
       }
     }
   }

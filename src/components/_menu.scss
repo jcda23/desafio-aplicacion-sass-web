@@ -39,12 +39,21 @@
     opacity: 1;
     pointer-events: auto;
     margin-left: 20px;
+
     a {
       padding: 0 1rem;
     }
-    a:hover {
-      background-color: transparent;
+
+    .active {
+      border-bottom: 2px solid $white-color;
     }
+
+    a:hover {
+      transition: none;
+      background-color: transparent;
+      border-bottom: 2px solid $white-color;
+    }
+
     a:last-child {
       padding-right: 0;
     }

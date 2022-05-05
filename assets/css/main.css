@@ -63,7 +63,6 @@ h6 {
   font-size: 0.7rem; }
 
 i {
-  color: var(--link-color);
   transition: all 0.5s ease-out;
   text-decoration: none; }
 
@@ -160,7 +159,7 @@ p {
     width: 100%;
     min-height: 100vh;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.5); }
+    background-color: rgba(0, 0, 0, 0.75); }
     .hero-image .hero-image-opacity .hero-image-content h2 {
       font-size: 7vw;
       color: #fff; }
@@ -223,7 +222,8 @@ p {
     display: flex;
     flex-direction: none;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4); }
     .main .video .guid .hero-image-content h2 {
       font-size: 7vw;
       color: #fff; }
@@ -272,20 +272,21 @@ p {
   .menu-btn svg > * {
     fill: #38b000; }
 
+@media screen and (min-width: 1024px) {
+  .menu-btn {
+    display: none; } }
 .btn {
   border-radius: 0.5rem;
   padding: 1rem;
   display: inline-block;
   width: 200px;
   font-weight: bold;
+  opacity: 1;
   text-align: center;
   text-decoration: none;
   color: #fff;
   background-color: #38b000; }
 
-@media screen and (min-width: 1024px) {
-  .menu-btn {
-    display: none; } }
 .menu {
   position: fixed;
   left: 0;
@@ -321,8 +322,12 @@ p {
     margin-left: 20px; }
     .menu a {
       padding: 0 1rem; }
+    .menu .active {
+      border-bottom: 2px solid #fff; }
     .menu a:hover {
-      background-color: transparent; }
+      transition: none;
+      background-color: transparent;
+      border-bottom: 2px solid #fff; }
     .menu a:last-child {
       padding-right: 0; } }
 .mixer-logo {
@@ -385,7 +390,15 @@ p {
     .mixer-logo a {
       margin-top: 1rem; } }
 .mixer-btn a {
-  position: relative; }
+  display: inline-block;
+  position: relative;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  width: 200px;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: #38b000;
+  color: #fff; }
   .mixer-btn a span {
     position: absolute;
     display: block;
@@ -394,7 +407,7 @@ p {
   .mixer-btn a span:nth-child(1) {
     left: 0;
     bottom: 0;
-    width: 4px;
+    width: 3px;
     height: 100%;
     transform: scaleY(0);
     transform-origin: top;
@@ -404,7 +417,7 @@ p {
     left: 0;
     top: 0;
     width: 100%;
-    height: 4px;
+    height: 3px;
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 0.25s;
@@ -412,7 +425,7 @@ p {
   .mixer-btn a span:nth-child(3) {
     right: 0;
     top: 0;
-    width: 4px;
+    width: 3px;
     height: 100%;
     transform: scaleY(0);
     transform-origin: bottom;
@@ -422,16 +435,17 @@ p {
     right: 0;
     bottom: 0;
     width: 100%;
-    height: 4px;
+    height: 3px;
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.25s;
     transition-delay: 0.75s; }
 .mixer-btn a:hover {
   background-color: #fff;
-  color: var(--white-color);
+  color: #222;
   transition: 0.4s;
   transition-delay: 1s;
+  opacity: 1;
   width: 250px;
   letter-spacing: 3px; }
 .mixer-btn a:hover span:nth-child(1) {
@@ -452,6 +466,92 @@ p {
   transform-origin: right;
   transition: transform 0.25s;
   transition-delay: 0.75s; }
+
+.mixer-btn-neon {
+  /*
+  a:hover span:nth-child(1) {
+    left: 100%;
+    transition: 1s;
+  }
+
+  a:hover span:nth-child(2) {
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+  }
+
+  a:hover span:nth-child(3) {
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+  }
+
+  a:hover span:nth-child(4) {
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+  }*/ }
+  .mixer-btn-neon a {
+    background-color: #38b000;
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    width: 200px;
+    font-weight: bold;
+    text-align: center;
+    overflow: hidden;
+    transition: 0.2s;
+    /*
+    span {
+      position: absolute;
+      display: block;
+    }
+
+    span:nth-child(1) {
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, $first-color);
+    }
+
+    span:nth-child(2) {
+      top: 100%;
+      right: 0;
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(180deg, transparent, $first-color);
+      background: linear-gradient(180deg, transparent);
+    }
+    span:nth-child(3) {
+      right: -100%;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(180deg, transparent, $first-color);
+      background: linear-gradient(270deg, transparent);
+    }
+
+    span:nth-child(4) {
+      bottom: -100%;
+      left: 0;
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(360deg, transparent, $first-color);
+    }*/ }
+  .mixer-btn-neon a:hover {
+    background-color: #240229;
+    /*#011802;*/
+    color: #fff;
+    box-shadow: 0 0 10px #38b000, 0 0 40px #38b000, 0 0 80px #38b000;
+    opacity: 1;
+    transition-delay: 0s; }
 
 .contact-card {
   margin: 1rem auto;
@@ -521,7 +621,7 @@ p {
     .contact .contact-form input[type="submit"]:hover {
       opacity: 0.75; }
     .contact .contact-form .btn-header {
-      background-color: #240229; }
+      background-color: #38b000; }
   .contact .contact-form *::placeholder {
     color: #666; }
   .contact .contact-form-response {
@@ -538,18 +638,19 @@ p {
 @media screen and (min-width: 1024px) {
   .contact {
     margin-bottom: 0; }
-
-  .contact-form {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 1rem; }
-    .contact-form input,
-    .contact-form textarea {
-      font-size: 1rem; }
-    .contact-form textarea {
-      grid-column: span 2; }
-    .contact-form input[type="submit"] {
-      margin-left: 0; } }
+    .contact .contact-form {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 1rem; }
+      .contact .contact-form input,
+      .contact .contact-form textarea {
+        font-size: 1rem; }
+      .contact .contact-form textarea {
+        grid-column: span 2; }
+      .contact .contact-form input[type="submit"] {
+        margin-left: 0; }
+      .contact .contact-form .btn-header {
+        background-color: #240229; } }
 .about {
   background-image: url("../img/3.jpg");
   background-repeat: no-repeat;
@@ -588,7 +689,10 @@ p {
       margin: 1rem auto;
       padding: 1rem;
       max-width: 800px;
-      height: auto; } }
+      height: auto; }
+      .about .container-about .about-cards .about-card p {
+        margin: 1rem 2rem;
+        text-align: justify; } }
 @media screen and (min-width: 1024px) {
   .about {
     margin-bottom: 0; }
@@ -598,6 +702,36 @@ p {
       margin: 1rem auto;
       padding: 1rem;
       max-width: 800px;
-      height: auto; } }
+      height: auto; }
+      .about .container-about .about-card p {
+        margin: 1rem 2rem;
+        text-align: justify; } }
+.guid-secundaria {
+  background: black; }
+  .guid-secundaria .guid-1 {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 100px; }
+    .guid-secundaria .guid-1 .video-guid {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      pointer-events: none; }
+    .guid-secundaria .guid-1 h2 {
+      position: relative;
+      color: white;
+      font-size: 3em; }
+    .guid-secundaria .guid-1 p {
+      position: relative;
+      color: white;
+      font-size: 1.2em; }
 
 /*# sourceMappingURL=main.css.map */

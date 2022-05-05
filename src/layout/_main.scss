@@ -11,6 +11,7 @@
       height: 100%;
       text-align: center;
       @include flexible(flex, none, center, center);
+      background-color: rgba(0, 0, 0, 0.4);
       .hero-image-content h2 {
         font-size: 7vw;
         color: $white-color;
